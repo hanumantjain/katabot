@@ -1,0 +1,7 @@
+[build]
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/n8n/*"
+  to = "/.netlify/functions/n8n-proxy/:splat"
+  status = 200
