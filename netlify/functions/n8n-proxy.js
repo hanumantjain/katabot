@@ -1,8 +1,8 @@
 export async function handler(event, context) {
     const fetch = (await import("node-fetch")).default;
   
-    // Replace with your local n8n instance
-    const N8N_URL = "http://localhost:5678";
+    // Use environment variable for n8n URL, fallback to localhost for development
+    const N8N_URL = process.env.N8N_URL || "http://localhost:5678";
   
     try {
       // Forward request to n8n webhook
