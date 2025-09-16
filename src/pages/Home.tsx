@@ -3,7 +3,6 @@ import { useDynamicContext } from '@dynamic-labs/sdk-react-core'
 import { isEthereumWallet } from '@dynamic-labs/ethereum'
 import { isAddress, parseEther } from 'viem'
 import { useNavigate } from 'react-router-dom'
-const WEBHOOK_URL = import.meta.env.VITE_N8N_WORKFLOW_OPENSEA_MPC
 
 const Home = () => {
 	const [input, setInput] = useState<string>('')
