@@ -1,8 +1,8 @@
 export async function handler(event, context) {
     const fetch = (await import("node-fetch")).default;
   
-    // Replace with your EC2 public IP and n8n port
-    const N8N_URL = "http://107.22.140.160:5678";
+    // Replace with your local n8n instance
+    const N8N_URL = "http://localhost:5678";
   
     try {
       // Forward request to n8n webhook
