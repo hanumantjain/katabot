@@ -3,6 +3,7 @@ export async function handler(event, context) {
   
     // Use environment variable for n8n URL, fallback to localhost for development
     const N8N_URL = process.env.N8N_URL || "http://localhost:5678";
+    console.log("N8N_URL:", N8N_URL); // Debug log
   
     try {
       // Forward request to n8n webhook
