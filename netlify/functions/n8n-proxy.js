@@ -7,7 +7,10 @@ export async function handler(event, context) {
   
     try {
       // Forward request to n8n webhook
-      const response = await fetch(`${N8N_URL}${event.path.replace('/.netlify/functions/n8n-proxy', '')}`, {
+      // Extract the path after the function name
+      const targetPath = event.path.replace('/.netlify/functions/n8n-proxy', '') || '/';
+      console.log("Target path:", targetPath);
+      const response = await fetch(`${N8N_URL}${targetPath}`, {
         method: event.httpMethod,
         headers: {
           "Content-Type": "application/json",
